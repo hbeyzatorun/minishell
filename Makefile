@@ -2,7 +2,7 @@ CC = cc
 
 CFLAGS = -Wall -Werror -Wextra
 
-NAME = shellock
+NAME = minishell
 
 INC = -I . -I libft
 

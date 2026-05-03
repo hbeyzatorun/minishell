@@ -11,7 +11,9 @@ int	main(void)
 		{
 			add_history(a);
 		}
+		free(a);
 		a = readline("minishell$");
 	}
+	write(1, "exit\n", 5);
 	return (0);
 }
