@@ -8,4 +8,26 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+typedef enum value_token
+{
+	characters,    // kelime la ls
+	handle,        //'
+	handledouble,  //"
+	redirect_in,   //<
+	redirect_out,  //>
+	heredoc,       //<<
+	append,        //>>
+	pipes,         // |
+	env_variables, // $
+
+}						value_token;
+
+typedef struct s_val_token
+{
+	value_token			type;
+	struct s_val_token	*next;
+	char				*value;
+
+}						t_val_token;
+
 #endif
